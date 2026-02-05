@@ -1,8 +1,8 @@
 {
-  "version": "0.2.0",
+  "version": "0.1.0",
   "configurations": [
     {
-      "name": "Debug Lazygit",
+      "name": "Debug",
       "type": "go",
       "request": "launch",
       "mode": "auto",
@@ -15,7 +15,7 @@
       "console": "integratedTerminal",
     },
     {
-      "name": "Tail Lazygit logs",
+      "name": "Tail logs",
       "type": "go",
       "request": "launch",
       "mode": "auto",
@@ -43,7 +43,7 @@
       "type": "go",
       "request": "attach",
       "mode": "local",
-      "processId": "test_lazygit",
+      "processId": "test",
       "hideSystemGoroutines": true,
       "console": "integratedTerminal",
     },
@@ -52,8 +52,8 @@
     {
       "name": "Run with logs",
       "configurations": [
-        "Tail Lazygit logs",
-        "Debug Lazygit"
+        "Tail logs",
+        "Debug"
       ],
       "stopAll": true
     }
