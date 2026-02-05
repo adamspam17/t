@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/jesseduffield/lazygit/pkg/cheatsheet"
+	"github.com/adamspam17/t/pkg/cheatsheet"
 )
 
 func main() {
