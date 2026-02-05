@@ -14,13 +14,13 @@ import (
 	"strings"
 
 	"github.com/integrii/flaggy"
-	"github.com/jesseduffield/lazygit/pkg/app/daemon"
-	appTypes "github.com/jesseduffield/lazygit/pkg/app/types"
-	"github.com/jesseduffield/lazygit/pkg/config"
-	"github.com/jesseduffield/lazygit/pkg/env"
-	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
-	"github.com/jesseduffield/lazygit/pkg/logs/tail"
-	"github.com/jesseduffield/lazygit/pkg/utils"
+	"github.com/adamspam17/t/pkg/app/daemon"
+	appTypes "github.com/adamspam17/t/pkg/app/types"
+	"github.com/adamspam17/t/pkg/config"
+	"github.com/adamspam17/t/pkg/env"
+	integrationTypes "github.com/adamspam17/t/pkg/integration/types"
+	"github.com/adamspam17/t/pkg/logs/tail"
+	"github.com/adamspam17/t/pkg/utils"
 	"github.com/samber/lo"
 	"gopkg.in/yaml.v3"
 )
@@ -123,13 +123,13 @@ func Start(buildInfo *BuildInfo, integrationTest integrationTypes.IntegrationTes
 		os.Exit(0)
 	}
 
-	tempDir, err := os.MkdirTemp("", "lazygit-*")
+	tempDir, err := os.MkdirTemp("", "t-*")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 	defer os.RemoveAll(tempDir)
 
-	appConfig, err := config.NewAppConfig("lazygit", buildInfo.Version, buildInfo.Commit, buildInfo.Date, buildInfo.BuildSource, cliArgs.Debug, tempDir)
+	appConfig, err := config.NewAppConfig("t", buildInfo.Version, buildInfo.Commit, buildInfo.Date, buildInfo.BuildSource, cliArgs.Debug, tempDir)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
