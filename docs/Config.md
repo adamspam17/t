@@ -2,22 +2,22 @@
 
 Default path for the global config file:
 
-- Linux: `~/.config/lazygit/config.yml`
-- MacOS: `~/.config/lazygit/config.yml` (previously `~/Library/Application\ Support/lazygit/config.yml`)
-- Windows: `%LOCALAPPDATA%\lazygit\config.yml` (default location, but it will also be found in `%APPDATA%\lazygit\config.yml`
+- Linux: `~/.config/t/config.yml`
+- MacOS: `~/.config/t/config.yml` (previously `~/Library/Application\ Support/t/config.yml`)
+- Windows: `%LOCALAPPDATA%\t\config.yml` (default location, but it will also be found in `%APPDATA%\t\config.yml`
 
 For old installations (slightly embarrassing: I didn't realise at the time that you didn't need to supply a vendor name to the path so I just used my name):
 
-- Linux: `~/.config/jesseduffield/lazygit/config.yml`
-- MacOS: `~/Library/Application\ Support/jesseduffield/lazygit/config.yml`
-- Windows: `%APPDATA%\jesseduffield\lazygit\config.yml`
+- Linux: `~/.config/adamspam17/t/config.yml`
+- MacOS: `~/Library/Application\ Support/adamspam17/t/config.yml`
+- Windows: `%APPDATA%\adamspam17\t\config.yml`
 
-In addition to the global config file you can create repo-specific config files in `<repo>/.git/lazygit.yml`. Settings in these files override settings in the global config file. In addition, files called `.lazygit.yml` in any of the parent directories of a repo will also be loaded; this can be useful if you have settings that you want to apply to a group of repositories.
+In addition to the global config file you can create repo-specific config files in `<repo>/.git/t.yml`. Settings in these files override settings in the global config file. In addition, files called `.t.yml` in any of the parent directories of a repo will also be loaded; this can be useful if you have settings that you want to apply to a group of repositories.
 
 JSON schema is available for `config.yml` so that IntelliSense in Visual Studio Code (completion and error checking) is automatically enabled when the [YAML Red Hat][yaml] extension is installed. However, note that automatic schema detection only works if your config file is in one of the standard paths mentioned above. If you override the path to the file, you can still make IntelliSense work by adding
 
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/adamspam17/t/master/schema/config.json
 ```
 
 to the top of your config file or via [Visual Studio Code settings.json config][settings].
@@ -37,7 +37,7 @@ gui:
   # If true, allow scrolling past the bottom of the content in the main window
   scrollPastBottom: true
 
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#scroll-off-margin
+  # See https://github.com/adamspam17/t/blob/master/docs/Config.md#scroll-off-margin
   scrollOffMargin: 2
 
   # One of: 'margin' (default) | 'jump'
@@ -100,7 +100,7 @@ gui:
   shortTimeFormat: 3:04PM
 
   # Config relating to colors and styles.
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
+  # See https://github.com/adamspam17/t/blob/master/docs/Config.md#color-attributes
   theme:
     # Border color of focused window
     activeBorderColor:
@@ -121,7 +121,7 @@ gui:
       - blue
 
     # Background color of selected line.
-    # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#highlighting-the-selected-line
+    # See https://github.com/adamspam17/t/blob/master/docs/Config.md#highlighting-the-selected-line
     selectedLineBgColor:
       - blue
 
@@ -261,7 +261,7 @@ gui:
 
 # Config relating to git
 git:
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
+  # See https://github.com/adamspam17/t/blob/master/docs/Custom_Pagers.md
   paging:
     # Value of the --color arg in the git diff command. Some pagers want this to be set to 'always' and some want it set to 'never'
     colorArg: always
@@ -337,7 +337,7 @@ git:
   # If true, do not allow force pushes
   disableForcePushing: false
 
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#predefined-commit-message-prefix
+  # See https://github.com/adamspam17/t/blob/master/docs/Config.md#predefined-commit-message-prefix
   commitPrefix:
     # pattern to match on. E.g. for 'feature/AB-123' to match on the AB-123 use "^\\w+\\/(\\w+-\\w+).*"
     pattern: ""
@@ -345,7 +345,7 @@ git:
     # Replace directive. E.g. for 'feature/AB-123' to start the commit message with 'AB-123 ' use "[$1] "
     replace: ""
 
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#predefined-branch-name-prefix
+  # See https://github.com/adamspam17/t/blob/master/docs/Config.md#predefined-branch-name-prefix
   branchPrefix: ""
 
   # If true, parse emoji strings in commit messages e.g. render :rocket: as 🚀
@@ -444,7 +444,7 @@ os:
   openLinkCommand: ""
 
   # CopyToClipboardCmd is the command for copying to clipboard.
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-command-for-copying-to-and-pasting-from-clipboard
+  # See https://github.com/adamspam17/t/blob/master/docs/Config.md#custom-command-for-copying-to-and-pasting-from-clipboard
   copyToClipboardCmd: ""
 
   # ReadFromClipboardCmd is the command for reading the clipboard.
