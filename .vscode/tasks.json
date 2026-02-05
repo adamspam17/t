@@ -10,13 +10,13 @@
       "problemMatcher": [],
     },
     {
-      "label": "Bump gocui",
+      "label": "Bump gui",
       "type": "shell",
       "command": "./scripts/bump_gocui.sh",
       "problemMatcher": [],
     },
     {
-      "label": "Bump lazycore",
+      "label": "Bump core",
       "type": "shell",
       "command": "./scripts/bump_lazycore.sh",
       "problemMatcher": [],
